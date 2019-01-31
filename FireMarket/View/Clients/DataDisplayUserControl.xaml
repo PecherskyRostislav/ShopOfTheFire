@@ -1,0 +1,62 @@
+﻿<UserControl x:Class="FireMarket.View.Clients.DataDisplayUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FireMarket.View.Clients"
+             mc:Ignorable="d" 
+                d:DesignHeight="150" d:DesignWidth="400"
+                 VerticalContentAlignment="Center">
+
+        <Grid DataContext="{Binding TempItem}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Column="0" Grid.Row="0"
+                       Text="Им'я: " />
+            <TextBox Grid.Column="1" Grid.Row="0"
+                       Text="{Binding FullName,  Mode=TwoWay}"/>
+
+        
+            <TextBlock Grid.Column="0" Grid.Row="1"
+                       Text="Дата народження: " />
+            <TextBox Grid.Column="1" Grid.Row="1"
+                       Text="{Binding DateBirth,  Mode=TwoWay}" />   
+        
+        
+            <TextBlock Grid.Column="0" Grid.Row="2"
+                       Text="Дата смертi: " />
+            <TextBox Grid.Column="1" Grid.Row="2"
+                       Text="{Binding DateDeath,  Mode=TwoWay}" />
+        
+        
+            <TextBlock Grid.Column="0" Grid.Row="3"
+                       Text="Перiод: " />
+            <TextBox Grid.Column="1" Grid.Row="3"
+                     IsEnabled="False"
+                       Text="{Binding TotalAmount,  Mode=TwoWay}" />  
+        
+        
+            <TextBlock Grid.Column="0" Grid.Row="4"
+                       Text="На общую сумму: " />
+            <TextBox Grid.Column="1" Grid.Row="4"
+                     IsEnabled="False"
+                       Text="{Binding TotalPrice,  Mode=TwoWay}" />
+        
+        
+            <TextBlock Grid.Column="0" Grid.Row="5"
+                       Text="Заметки: " />
+            <TextBox Grid.Column="1" Grid.Row="5"
+                       Text="{Binding Note,  Mode=TwoWay}" />
+        </Grid>
+</UserControl>

@@ -1,0 +1,83 @@
+﻿<UserControl x:Class="FireMarket.View.Products.DataDisplayUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FireMarket.View.Products"
+             mc:Ignorable="d" 
+             d:DesignHeight="250" d:DesignWidth="300"
+             VerticalContentAlignment="Center">
+
+    <Grid DataContext="{Binding TempItem}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Column="0" Grid.Row="0"
+                   Text="Название: " />
+        <TextBox Grid.Column="1" Grid.Row="0"
+                   Text="{Binding Name, Mode=TwoWay}" />
+        
+        
+        <TextBlock Grid.Column="0" Grid.Row="1"
+                   Text="Пожарный класс: " />
+        <TextBox Grid.Column="1" Grid.Row="1"
+                   Text="{Binding ExtingushClass, Mode=TwoWay}" />
+        
+        
+        <TextBlock Grid.Column="0" Grid.Row="2"
+                   Text="View: " />
+        <TextBox Grid.Column="1" Grid.Row="2"
+                   Text="{Binding View, Mode=TwoWay}" />
+        
+        
+        <TextBlock Grid.Column="0" Grid.Row="3"
+                   Text="Давление: " />
+        <TextBox Grid.Column="1" Grid.Row="3"
+                   Text="{Binding Pressure, Mode=TwoWay}" />
+        
+        
+        <TextBlock Grid.Column="0" Grid.Row="4"
+                   Text="Температура: " />
+        <TextBox Grid.Column="1" Grid.Row="4"
+                   Text="{Binding Temperature, Mode=TwoWay}" />
+        
+        
+        <TextBlock Grid.Column="0" Grid.Row="5"
+                   Text="Площадь покрытия: " />
+        <TextBox Grid.Column="1" Grid.Row="5"
+                   Text="{Binding AreaCovered, Mode=TwoWay}" />
+        
+        
+        <TextBlock Grid.Column="0" Grid.Row="6"
+                   Text="Пригодность: " />
+        <TextBox Grid.Column="1" Grid.Row="6"
+                 IsEnabled="False"
+                   Text="{Binding Suitability, Mode=TwoWay}" />
+        
+        
+        <TextBlock Grid.Column="0" Grid.Row="7"
+                   Text="Кол-во на складах: " />
+        <TextBox Grid.Column="1" Grid.Row="7" IsEnabled="False"
+                   Text="{Binding Count, Mode=TwoWay}" />
+        
+        
+        <TextBlock Grid.Column="0" Grid.Row="8"
+                   Text="Цена: " />
+        <TextBox Grid.Column="1" Grid.Row="8"
+                   Text="{Binding Price, Mode=TwoWay}" />
+
+    </Grid>
+</UserControl>

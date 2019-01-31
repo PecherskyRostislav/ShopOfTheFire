@@ -1,0 +1,30 @@
+﻿<Application x:Class="FireMarket.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:FireMarket"
+             xmlns:view="clr-namespace:FireMarket.View"
+             xmlns:prod="clr-namespace:FireMarket.View.Products"
+             xmlns:stor="clr-namespace:FireMarket.View.Storages"
+             xmlns:clients="clr-namespace:FireMarket.View.Clients"
+             xmlns:providers="clr-namespace:FireMarket.View.Providers"
+             xmlns:viewmodel="clr-namespace:FireMarket.ViewModel"
+             StartupUri="View\MainWindow.xaml">
+    <Application.Resources>
+        <DataTemplate DataType="{x:Type viewmodel:ProductsVM}"  >
+            <prod:ProductsPage />
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewmodel:StoragesVM}"  >
+            <stor:StoragesPage />
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewmodel:ClientsVM}"  >
+            <clients:ClientsPage />
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewmodel:ProvidersVM}"  >
+            <providers:ProvidersPage />
+        </DataTemplate>
+        
+    </Application.Resources>
+</Application>
